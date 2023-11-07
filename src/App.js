@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -9,7 +9,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function App() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary" style={{color:'darkred'}}>
+    <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
         <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
