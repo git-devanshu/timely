@@ -1,15 +1,18 @@
-// import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
-import Head from './components/Head';
-import CardGroup from './components/CardGroup';
+import NavHead from './components/NavHead';
+import Navbarcode from './components/Navbar';
+import Slide from './components/Slide';
+import Carousel1 from './components/Carousel1';
+import Foot from './components/Foot';
 
 function App() {
   return (
     <div>
-      <Navbar/>
-      <Head/>
-      <CardGroup/>
+      <Navbarcode/>
+      <NavHead/>
+      <Slide/>
+      <Carousel1/>
+      <Foot/>
     </div>
   );
 }   

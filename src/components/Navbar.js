@@ -1,49 +1,37 @@
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import Image from 'react-bootstrap/Image';
 
-function NavScrollExample() {
+function Example() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
-    <Navbar expand="lg" className="navbar bg-dark" data-bs-theme="dark">
-      <Container fluid>
-        <Navbar.Brand href="#" style={{fontFamily : "initial"}}>TIMELY</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '200px'}}
-            navbarScroll
-          >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Service</Nav.Link>
-            <NavDropdown title="Shop" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Products</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Cart</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                My Account
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#">
-              About
-            </Nav.Link>
-          </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search Products"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <div style={{height : '50px', width : '100vw', backgroundColor : 'black'}}>
+      <Button style={{height : '48px', width : '36px', position : 'absolute', top : '0px', right : '12px', color : 'black', backgroundColor : 'white', fontSize : '20px', rotate : '90deg'}} onClick={handleShow}>
+        |||
+      </Button>
+      <Image src="./images/logotimely.jpg" style={{height : '36px', position: 'absolute', top : '8px', left : '10px'}}/>
+      <Image src="./images/login2.png" style={{height : '36px', position: 'absolute', top : '8px', left : '120px'}}/>
+
+      <Offcanvas data-bs-theme="dark" show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title style={{fontSize : '40px'}}>Timely</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <div style={{fontSize : '26px'}}>
+            <a href='#' style={{textDecoration : 'none', color : 'whitesmoke'}}>Home</a><br/>
+            <a href='#' style={{textDecoration : 'none', color : 'whitesmoke'}}>Features</a><br/>
+            <a href='#' style={{textDecoration : 'none', color : 'whitesmoke'}}>Shop Now</a><br/>
+            <a href='#' style={{textDecoration : 'none', color : 'whitesmoke'}}>About</a><br/>
+          </div>
+        </Offcanvas.Body>
+      </Offcanvas>
+    </div>
   );
 }
 
-export default NavScrollExample;
+export default Example;
