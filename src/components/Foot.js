@@ -6,7 +6,7 @@ function HeaderAndFooterExample() {
   return (
     <div style={{fontSize : '21px'}} data-bs-theme="dark">
     <Card className="text-center">
-      <Card.Header>Timely - Branded Smart Watches</Card.Header>
+      <Card.Header>Timely - Smart Watches</Card.Header>
       <Card.Body>
         <Card.Title><Image src='./images/social.png' style={{maxHeight :'35px'}} fluid/></Card.Title>
         <Card.Text>
